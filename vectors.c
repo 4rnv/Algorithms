@@ -14,7 +14,7 @@ struct vector makeVec(int capacity, int default_value) {
 	struct vector v;
 	v.current = 0;
 	v.capacity = capacity;
-	v.container = (int*)malloc(capacity*capacityof(int));
+	v.container = (int*)malloc(capacity*sizeof(int));
 	v.default_value = default_value;
 	if(v.container==NULL) {
 		printf("Malloc failed");
